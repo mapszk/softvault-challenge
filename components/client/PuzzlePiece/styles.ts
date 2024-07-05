@@ -29,6 +29,7 @@ const piece1 = css`
   h3 {
     font-size: 20px;
     margin-bottom: 15px;
+    font-weight: 700;
   }
   p {
     font-size: 16px;
@@ -45,7 +46,7 @@ const piece2 = css`
   ${base}
   background-image: url("/puzzle-pieces/bg-2.png");
   background-repeat: no-repeat;
-  background-position: 70%;
+  background-position: center;
   width: 398px;
   &:after {
     content: "";
@@ -62,6 +63,7 @@ const piece2 = css`
     margin-bottom: 15px;
     max-width: 200px;
     margin-left: 30px;
+    font-weight: 700;
   }
   p {
     font-size: 16px;
@@ -79,7 +81,7 @@ const piece3 = css`
   ${base}
   background-image: url("/puzzle-pieces/bg-3.png");
   background-repeat: no-repeat;
-  background-position: 70%;
+  background-position: center;
   width: 398px;
   &:after {
     content: "";
@@ -96,6 +98,7 @@ const piece3 = css`
     margin-bottom: 15px;
     max-width: 250px;
     margin-left: 15px;
+    font-weight: 700;
   }
   p {
     font-size: 16px;
