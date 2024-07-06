@@ -12,7 +12,7 @@ According to [Next.js docs](https://nextjs.org/docs/app/building-your-applicatio
 
 ### Components styling
 
-To style the components from Figma I chose to download the assets, some assets could't be downlaod as they exactly look in Figma because of how the design was made, so I tried to make it the more similar as possible.
+I chose to write the styles of the larger components in a new file, for better readability. To style the components from Figma I chose to download the assets, some assets could't be downlaod as they exactly look in Figma because of how the design was made, so I tried to make it the more similar as possible.
 
 ## Run the project
 
