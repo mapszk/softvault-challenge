@@ -16,7 +16,7 @@ describe("Puzzle Piece component", () => {
         title={props.title}
         description={props.description}
         iconUrl={props.iconUrl}
-        pieceNumber={props.pieceNumber}
+        pieceNumber={props.pieceNumber as 1}
       />
     );
     const heading = screen.getByRole("heading", { level: 3 });
@@ -29,7 +29,7 @@ describe("Puzzle Piece component", () => {
         title={props.title}
         description={props.description}
         iconUrl={props.iconUrl}
-        pieceNumber={props.pieceNumber}
+        pieceNumber={props.pieceNumber as 1}
       />
     );
     const paragraph = screen.getByRole("paragraph");
@@ -42,7 +42,7 @@ describe("Puzzle Piece component", () => {
         title={props.title}
         description={props.description}
         iconUrl={props.iconUrl}
-        pieceNumber={props.pieceNumber}
+        pieceNumber={props.pieceNumber as 1}
       />
     );
     const paragraph = screen.getByAltText("Icon");

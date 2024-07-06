@@ -1,5 +1,6 @@
 import PuzzlePiece from "@/components/client/PuzzlePiece";
 import PuzzlePieceServer from "@/components/server/PuzzlePiece";
+import Warning from "@/components/server/Warning";
 
 export default function Home() {
   return (
@@ -24,7 +25,8 @@ export default function Home() {
           iconUrl="/icon-1.svg"
         />
       </div>
-      <div className="flex gap-4">
+      <Warning text="Below are some of the key technologies we use in our projects:" />
+      {/* <div className="flex gap-4">
         <PuzzlePieceServer
           pieceNumber={1}
           title="Understanding needs"
@@ -43,7 +45,7 @@ export default function Home() {
           description="Lorem Ipsum is simply dummy text of the printin and typesetting industry. Lorem Ipsum has been the industry's standard..."
           iconUrl="/icon-1.svg"
         />
-      </div>
+      </div> */}
     </main>
   );
 }
