@@ -1,6 +1,7 @@
 import PuzzlePiece from "@/components/client/PuzzlePiece";
 import PuzzlePieceServer from "@/components/server/PuzzlePiece";
-import Warning from "@/components/server/Warning";
+import Warning from "@/components/client/Warning";
+import WarningServer from "@/components/server/Warning";
 
 export default function Home() {
   return (
@@ -18,15 +19,15 @@ export default function Home() {
           description="Lorem Ipsum is simply dummy text of the printin and typesetting industry. Lorem Ipsum has been the industry's standard..."
           iconUrl="/icon-1.svg"
         />
-        <PuzzlePiece
+        {/* <PuzzlePiece
           pieceNumber={3}
           title="Developing customized solutions"
           description="Lorem Ipsum is simply dummy text of the printin and typesetting industry. Lorem Ipsum has been the industry's standard..."
           iconUrl="/icon-1.svg"
-        />
+        /> */}
+        <Warning text="Below are some of the key technologies we use in our projects:" />
       </div>
-      <Warning text="Below are some of the key technologies we use in our projects:" />
-      {/* <div className="flex gap-4">
+      <div className="flex gap-4">
         <PuzzlePieceServer
           pieceNumber={1}
           title="Understanding needs"
@@ -39,13 +40,14 @@ export default function Home() {
           description="Lorem Ipsum is simply dummy text of the printin and typesetting industry. Lorem Ipsum has been the industry's standard..."
           iconUrl="/icon-1.svg"
         />
-        <PuzzlePieceServer
+        {/* <PuzzlePieceServer
           pieceNumber={3}
           title="Developing customized solutions"
           description="Lorem Ipsum is simply dummy text of the printin and typesetting industry. Lorem Ipsum has been the industry's standard..."
           iconUrl="/icon-1.svg"
-        />
-      </div> */}
+        /> */}
+        <WarningServer text="Below are some of the key technologies we use in our projects:" />
+      </div>
     </main>
   );
 }

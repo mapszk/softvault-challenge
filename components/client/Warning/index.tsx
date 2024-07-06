@@ -1,4 +1,10 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+"use client";
+
 import Image from "next/image";
+import { jsx } from "@emotion/react";
+import { warningStyles } from "./styles";
 
 interface Props {
   /**
@@ -9,25 +15,25 @@ interface Props {
 
 export default function Warning({ text }: Props) {
   return (
-    <div className="w-[472px] h-[112px] relative flex items-center text-center after:bg-[url('/warning-border.svg')] after:absolute after:w-full after:h-full">
-      <div className="w-7 h-7 flex items-center justify-center rounded-full border-4 absolute bottom-[1px] left-[87px] translate-y-1/2 border-emerald-500">
-        <div className="w-2 h-2 rounded-full bg-orange-400"></div>
+    <div css={warningStyles}>
+      <div className="circle">
+        <div></div>
       </div>
       <Image
-        className="absolute top-1/2 -left-4 -translate-y-1/2"
+        className="decor left"
         alt="Decor"
         width={9}
         height={37}
         src="/warning-decor.svg"
       />
       <Image
-        className="absolute top-1/2 -right-4 -translate-y-1/2 rotate-180"
+        className="decor right"
         alt="Decor"
         width={9}
         height={37}
         src="/warning-decor.svg"
       />
-      <p className="text-emerald-300 font-semibold">{text}</p>
+      <p>{text}</p>
     </div>
   );
 }
