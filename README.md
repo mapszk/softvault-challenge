@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SoftVault Front-end Challenge
 
-## Getting Started
+This is my proposal for the front-end challenge. Using Next 14, Emotion, documentated components using Storybook, and with a Dockerfile to build a Docker image ready to deploy. Before running the project, please read the notes bellow about the approach.
 
-First, run the development server:
+## Notes
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Some things to keep in mind about the development of this challenge:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### CSS in JS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+According to [Next.js docs](https://nextjs.org/docs/app/building-your-application/styling/css-in-js), CSS in JS is not supported using the App router structure and Server Components. Because of this we are losing an important advantage of Next.js. I didn't wanted to stop using the required libraries for this project, so I made two versions for each component, one using Emotion as a client component, and the other one is a suggestion made with TailwindCSS to avoid converting the component to a client component. In my opinion, I think it's not worth it to stop using Server Components to use CSS in JS, I would prefer the advantage of Next.js features with another styling alternative, such as CSS Modules, TailwindCSS, Styled JSX, or even vanilla CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Design styling
 
-## Learn More
+To style the components on Figma I chose to download the assets, some assets could't be downlaod as they exactly look in Figma because of how the design was made, so I tried to make it the more similar as possible.
 
-To learn more about Next.js, take a look at the following resources:
+## Run the project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can run the project in a development environment using the following commands. The project doesn't require any environment variable.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Install dependencies:
 
-## Deploy on Vercel
+    npm run install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    npm run dev
+
+## Tests
+
+To run the tests use this command:
+
+    npm run test
+
+## Storybook
+
+To run Storybook environment and get all the documentation about components use this command:
+
+    npm run storybook
+
+## Deployment
+
+You can build a Docker image for deployment using the following command:
+
+    docker build -t TAG_NAME .
