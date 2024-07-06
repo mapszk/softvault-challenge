@@ -7,5 +7,6 @@ describe("Warning component", () => {
     render(<Warning text="test" />);
     const text = screen.getByRole("paragraph");
     expect(text).toBeInTheDocument();
+    expect(text.textContent).toBe("test");
   });
 });

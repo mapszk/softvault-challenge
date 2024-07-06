@@ -21,6 +21,7 @@ describe("Puzzle Piece component", () => {
     );
     const heading = screen.getByRole("heading", { level: 3 });
     expect(heading).toBeInTheDocument();
+    expect(heading.textContent).toBe(props.title);
   });
 
   it("renders a paragraph", () => {
@@ -34,6 +35,7 @@ describe("Puzzle Piece component", () => {
     );
     const paragraph = screen.getByRole("paragraph");
     expect(paragraph).toBeInTheDocument();
+    expect(paragraph.textContent).toBe(props.description);
   });
 
   it("renders an image", () => {
@@ -45,7 +47,7 @@ describe("Puzzle Piece component", () => {
         pieceNumber={props.pieceNumber as 1}
       />
     );
-    const paragraph = screen.getByAltText("Icon");
-    expect(paragraph).toBeInTheDocument();
+    const image = screen.getByAltText("Icon");
+    expect(image).toBeInTheDocument();
   });
 });
