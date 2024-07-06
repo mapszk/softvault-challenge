@@ -3,7 +3,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import PuzzlePiece from "../components/server/PuzzlePiece/index";
 
 const meta: Meta<typeof PuzzlePiece> = {
-  title: "components/PuzzlePieceServer",
+  title: "Server/PuzzlePieceServer",
+  tags: ["autodocs"],
   parameters: {
     layout: "centered",
     backgrounds: {

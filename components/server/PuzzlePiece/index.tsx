@@ -22,10 +22,22 @@ const title3Classes = `${baseTitleClasses} max-w-[250px] ml-6`;
 const description3Classes = `${baseDescriptionClasses} max-w-[300px] ml-5`;
 
 interface Props {
+  /**
+   * Title to show on the piece
+   */
   title: string;
+  /**
+   * Description to show on the piece
+   */
   description: string;
+  /**
+   * Icon image URL, will show in the top of the piece
+   */
   iconUrl: string;
-  pieceNumber: number;
+  /**
+   * This will change the shape of the piece, only shapes available at the moment: 1, 2 and 3
+   */
+  pieceNumber: 1 | 2 | 3;
 }
 
 export default function PuzzlePiece({
